@@ -93,7 +93,7 @@ class SvmModel(ThundersvmBase):
         else:
             self._gamma = self.gamma
 
-        kernel = KERNEL_TYPE.index(self.kernel)
+        kernel = self.kernel
 
         fit = self._sparse_fit if self._sparse else self._dense_fit
         self.model = thundersvm.model_new(solver_type)
